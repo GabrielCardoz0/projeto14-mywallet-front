@@ -1,7 +1,9 @@
 // import react from "react"
 // import LoginPage from "./paginas/LoginPage"
 import GlobalStyle from "./GlobalStyle"
-import RegisterPage from "./paginas/RegisterPage"
+import HomePage from "./paginas/HomePage"
+// import RegisterPage from "./paginas/RegisterPage"
+
 
 
 export default function App(){
@@ -11,7 +13,8 @@ export default function App(){
         <>
             <GlobalStyle/>
             {/* <LoginPage/> */}
-            <RegisterPage/>
+            {/* <RegisterPage/> */}
+            <HomePage/>
         </>
     )
 };
