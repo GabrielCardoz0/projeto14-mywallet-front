@@ -8,7 +8,7 @@ export default function LoginPage() {
             <input type="email" placeholder="E-mail"></input>
             <input type="password" placeholder="Senha"></input>
             <button>Entrar</button>
-            <a>Primeira vez? Cadastre-se!</a>
+            <span>Primeira vez? Cadastre-se!</span>
         </BackgroundPurple>
     )
 };
@@ -28,6 +28,7 @@ const BackgroundPurple = styled.div`
         font-size:32px;
         color: #fff;
         font-weight:400;
+        cursor:pointer;
     }
 
     input{
@@ -49,16 +50,18 @@ const BackgroundPurple = styled.div`
         font-size:20px;
         font-weight:700;
         width:326px;
-        height:58px;
+        height:46px;
         border:none;
         border-radius:5px;
         box-shadow:0px 0px 3px #333;
+        cursor:pointer;
     }
     
-    a{
+    span{
         margin-top:36px;
         color: #fff;
         font-size:15px;
         font-weight:700;
+        cursor:pointer;
     };
 `;
