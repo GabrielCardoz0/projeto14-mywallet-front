@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
 export default function RegisterPage(params) {
@@ -9,7 +10,8 @@ export default function RegisterPage(params) {
             <input type="password" placeholder="Senha"></input>
             <input type="password" placeholder="Confirmar senha"></input>
             <button>Cadastrar</button>
-            <span>Já tem uma conta? Faça login!</span>
+            <Link to={"/"}><span>Já tem uma conta? Faça login!</span></Link>
+            
         </BackgroundPurple>
     )
 };
@@ -54,10 +56,10 @@ const BackgroundPurple = styled.div`
         border-radius:5px;
         box-shadow:0px 0px 3px #333;
         cursor:pointer;
+        margin-bottom:25px;
     }
     
     span{
-        margin-top:36px;
         color: #fff;
         font-size:15px;
         font-weight:700;

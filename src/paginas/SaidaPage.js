@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
-export default function AddValorPage(params) {
+export default function SaidaValor(params) {
     return(
         <BackgroundPurple>
-            <span>Nova entrada</span>
+            <span>Nova saída</span>
             <input type="number" placeholder="Valor"></input>
             <input placeholder="Descrição"></input>
-            <button>Salvar entrada</button>
+            <button>Salvar saída</button>
+            <Link to={"/home"}><p>Cancelar</p></Link>
         </BackgroundPurple>
     )
 };
@@ -53,5 +55,11 @@ const BackgroundPurple = styled.div`
         border-radius:5px;
         box-shadow:0px 0px 3px #333;
         cursor:pointer;
+    }
+    p{
+        color:#fff;
+        font-size:16px;
+        font-weight:400;
+        margin-top:20px;
     }
     `;

@@ -1,5 +1,6 @@
 // import react from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
     return(
@@ -8,7 +9,7 @@ export default function LoginPage() {
             <input type="email" placeholder="E-mail"></input>
             <input type="password" placeholder="Senha"></input>
             <button>Entrar</button>
-            <span>Primeira vez? Cadastre-se!</span>
+            <Link to={"/register"}><span>Primeira vez? Cadastre-se!</span></Link>
         </BackgroundPurple>
     )
 };
@@ -55,11 +56,11 @@ const BackgroundPurple = styled.div`
         border-radius:5px;
         box-shadow:0px 0px 3px #333;
         cursor:pointer;
+        margin-bottom:25px;
     }
     
     span{
-        margin-top:36px;
-        color: #fff;
+        color: #FFF;
         font-size:15px;
         font-weight:700;
         cursor:pointer;

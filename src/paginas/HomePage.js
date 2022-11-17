@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components"
 
 export default function HomePage() {
@@ -10,7 +11,6 @@ export default function HomePage() {
 
             <RegistrosInOut>
                 {/* <span>Não há regidtros de entrada ou saída</span> */}
-                {/* <div className="listaValores"> */}
                 <ul>
                     <li> <span> <span className="date">data</span> oi oi </span> <span className="money">R$34,000</span></li>
 
@@ -42,14 +42,15 @@ export default function HomePage() {
 
                     <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
                 </ul>
-                {/* </div> */}
             </RegistrosInOut>
 
             <SaldoFinal><span>Saldo</span> <span>100000</span></SaldoFinal>
 
             <BottomBar>
-                <button className="butonIn">Nova Entrada</button>
-                <button className="buttonOut">Nova saída</button>
+                <Link to={"/addin"}><button>Nova Entrada</button></Link>
+                <Link to={"/addout"}><button>Nova saída</button></Link>
+                
+                
             </BottomBar>
         </BackgroundPurple>
     )
