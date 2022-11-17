@@ -1,57 +1,37 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"
+import signout from "../images/logout.png"
 
 export default function HomePage() {
     return(
         <BackgroundPurple>
             <TopBar>
                 <div>Olá, Fulano</div>
-                <div>Exit</div>
+                <Link to={"/"}><img src={signout} alt=""/></Link>
             </TopBar>
 
             <RegistrosInOut>
                 {/* <span>Não há regidtros de entrada ou saída</span> */}
                 <ul>
-                    <li> <span> <span className="date">data</span> oi oi </span> <span className="money">R$34,000</span></li>
+                    <li> <span> <span className="date">data</span> oi </span> <Money entrou={true} >R$34,00</Money></li>
 
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
+                    <li> <span> <span className="date">data</span> oi </span> <Money entrou={false} >R$34,000</Money></li>
 
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
+                    <li> <span> <span className="date">data</span> oi </span> <Money entrou={false} >R$34,000</Money></li>
 
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
+                    <li> <span> <span className="date">data</span> oi </span> <Money entrou={true} >R$34,000</Money></li>
 
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
-
-                    <li> <span> <span className="date">data</span> oi </span> <span className="money">R$34,000</span></li>
+                    <li> <span> <span className="date">data</span> oi </span> <Money entrou={true} >R$34,000</Money></li>
                 </ul>
             </RegistrosInOut>
 
-            <SaldoFinal><span>Saldo</span> <span>100000</span></SaldoFinal>
+            <SaldoFinal><span>Saldo</span> <span>10.000</span></SaldoFinal>
 
             <BottomBar>
                 <Link to={"/addin"}><button>Nova Entrada</button></Link>
                 <Link to={"/addout"}><button>Nova saída</button></Link>
-                
-                
             </BottomBar>
+
         </BackgroundPurple>
     )
 };
@@ -76,6 +56,9 @@ const TopBar = styled.div`
     width:326px;
     color: #fff;
     margin-bottom:25px;
+    img{
+        width:25px;
+    }
 `;
 
 const RegistrosInOut = styled.div`
@@ -108,14 +91,12 @@ const RegistrosInOut = styled.div`
         .date{
             color:#c6c6c6;
         }
-
-        .money{
-        color:#c70000;
-        /* color:#03ac00; */
-        }
-        
     }
 `;
+
+const Money = styled.span`
+    color: ${ props => props.entrou? "#0cac00":"#c70000"};
+`
 
  const SaldoFinal = styled.div`
     display:flex;
@@ -144,5 +125,6 @@ const BottomBar = styled.div`
         color: #fff;
         font-size:16px;
         font-weight:700;
+        cursor:pointer;
     }
 `;
