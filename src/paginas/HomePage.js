@@ -3,6 +3,7 @@ import styled from "styled-components"
 import signout from "../images/logout.png"
 
 export default function HomePage() {
+
     return(
         <BackgroundPurple>
             <TopBar>

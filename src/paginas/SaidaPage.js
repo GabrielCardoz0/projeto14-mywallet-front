@@ -1,13 +1,21 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components"
+import axios from "axios";
 
 export default function SaidaValor(params) {
+
+    function postarValor(){
+        alert("oi")
+
+        const usuario = {nome:"gabriel",password:"gabrielsenha"}
+    }
+
     return(
         <BackgroundPurple>
             <span>Nova saída</span>
             <input type="number" placeholder="Valor"></input>
             <input placeholder="Descrição"></input>
-            <button>Salvar saída</button>
+            <button onClick={()=> postarValor()}>Salvar saída</button>
             <Link to={"/home"}><p>Cancelar</p></Link>
         </BackgroundPurple>
     )
